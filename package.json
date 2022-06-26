@@ -1,0 +1,25 @@
+{
+  "name": "onlineclass",
+  "version": "1.0.0",
+  "description": "Complete backend for the online class.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriyaGupta1996/OnlineClass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriyaGupta1996/OnlineClass/issues"
+  },
+  "homepage": "https://github.com/PriyaGupta1996/OnlineClass#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.4.0"
+  }
+}
