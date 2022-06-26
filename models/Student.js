@@ -1,11 +1,13 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose')
 const { Schema } = mongoose;
+const autoIncrement = require('mongoose-auto-increment');
+
 
 const StudentSchema = new Schema({
     name: String,
-    age: String,
-    bloodGroup: String,
-    course: [{ type: mongoose.Schema.Types.ObjectId, ref: "Subject" }],
+    _id: { type: String, required: true },
+    email: String,
+    course: [{ type: String, ref: "Subject" }],
     motherName: String,
     fatherName: String,
     dateOfBirth: Date
@@ -13,6 +15,14 @@ const StudentSchema = new Schema({
     {
         timestamps: true
     });
+
+autoIncrement.initialize(mongoose.connection)
+
+StudentSchema.plugin(autoIncrement.plugin, {
+    model: 'Student',
+    startAt: 1001,
+    field: '_id'
+});
 
 const Student = mongoose.model("Student", StudentSchema)
 module.exports = Student
