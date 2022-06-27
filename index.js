@@ -15,7 +15,7 @@ connectDB()
 app.use(express.json()); // to accept JSON data
 
 app.use('/api/student', student)
-// app.use('/api/teacher', teacher)
+app.use('/api/teacher', teacher)
 // app.use('/api/subject', subject)
 
 const server = app.listen(5000, console.log('Server listening on 5000'))

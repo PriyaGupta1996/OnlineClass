@@ -27,7 +27,7 @@ const registerStudent = asyncHandler(async (req, res) => {
         }
     )
 
-    if (!Student) {
+    if (!StudentNew) {
         res.status(500)
         throw new Error("Internal Server Error")
     }

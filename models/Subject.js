@@ -6,6 +6,7 @@ const SubjectSchema = new Schema({
     teachers: [{
         type: mongoose.Schema.Types.ObjectId, ref: "Teacher"
     }],
+    days: [{ type: String }]
 },
     {
         timestamps: true
